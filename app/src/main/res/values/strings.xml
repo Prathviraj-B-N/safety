@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">safety</string>
+    <string name="safetyfirst">safetyFirst</string>
+    <string name="todo">TODO</string>
+    <string name="police">Police</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="fire">Fire</string>
+    <string name="pin">Pin :</string>
+</resources>

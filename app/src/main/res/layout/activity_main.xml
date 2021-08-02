@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15202B"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/call"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="108dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sendMessage"
+        app:layout_constraintTop_toBottomOf="@+id/fire"
+        app:srcCompat="@drawable/card" />
+
+    <ImageButton
+        android:id="@+id/sendLocation"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="108dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toStartOf="@+id/sendMessage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/siren"
+        app:layout_constraintTop_toBottomOf="@+id/fire"
+        app:srcCompat="@drawable/card" />
+
+    <ImageButton
+        android:id="@+id/siren"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="108dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toStartOf="@+id/sendLocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fire"
+        app:srcCompat="@drawable/card" />
+
+    <ImageButton
+        android:id="@+id/sendMessage"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="108dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toStartOf="@+id/call"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sendLocation"
+        app:layout_constraintTop_toBottomOf="@+id/fire"
+        app:srcCompat="@drawable/card" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#181818"
+        android:contentDescription="@string/todo"
+        android:fontFamily="@font/poppins_light"
+        android:paddingTop="10dp"
+        android:text="@string/safetyfirst"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ambulance"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="128dp"
+        android:background="#192734"
+        android:backgroundTint="#192734"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/police"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/card" />
+
+    <ImageButton
+        android:id="@+id/custom"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fire"
+        app:layout_constraintTop_toBottomOf="@+id/ambulance"
+        app:srcCompat="@drawable/card" />
+
+    <ImageButton
+        android:id="@+id/fire"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toStartOf="@+id/custom"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/police"
+        app:srcCompat="@drawable/card" />
+
+    <ImageButton
+        android:id="@+id/police"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="128dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toStartOf="@+id/ambulance"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/card" />
+
+    <ImageView
+        android:id="@+id/pincodeBar"
+        android:layout_width="350dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="#192734"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/ambulance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="126dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="20dp"
+        android:background="#020202"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="@+id/pincodeBar"
+        app:layout_constraintEnd_toEndOf="@+id/pincodeBar"
+        app:layout_constraintTop_toTopOf="@+id/pincodeBar"
+        app:layout_constraintVertical_bias="0.49" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/police"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/police"
+        app:layout_constraintEnd_toEndOf="@+id/police"
+        app:layout_constraintStart_toStartOf="@+id/police"
+        app:layout_constraintTop_toTopOf="@+id/police" />
+
+    <TextView
+        android:id="@+id/ambulanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/ambulance"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ambulance"
+        app:layout_constraintEnd_toEndOf="@+id/ambulance"
+        app:layout_constraintStart_toStartOf="@+id/ambulance"
+        app:layout_constraintTop_toTopOf="@+id/ambulance" />
+
+    <TextView
+        android:id="@+id/fireText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/fire"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fire"
+        app:layout_constraintEnd_toEndOf="@+id/fire"
+        app:layout_constraintStart_toStartOf="@+id/fire"
+        app:layout_constraintTop_toTopOf="@+id/fire" />
+
+    <TextView
+        android:id="@+id/pincodeBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/pin"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pincodeBar"
+        app:layout_constraintEnd_toEndOf="@+id/pincodeBar"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="@+id/pincodeBar"
+        app:layout_constraintTop_toTopOf="@+id/pincodeBar"
+        app:layout_constraintVertical_bias="0.49" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
