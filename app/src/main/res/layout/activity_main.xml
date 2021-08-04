@@ -8,50 +8,14 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/call"
-        android:layout_width="65dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="108dp"
+        android:id="@+id/changeSOS"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/sendMessage"
-        app:layout_constraintTop_toBottomOf="@+id/fire"
-        app:srcCompat="@drawable/card" />
-
-    <ImageButton
-        android:id="@+id/sendLocation"
-        android:layout_width="65dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="108dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintEnd_toStartOf="@+id/sendMessage"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/siren"
-        app:layout_constraintTop_toBottomOf="@+id/fire"
-        app:srcCompat="@drawable/card" />
-
-    <ImageButton
-        android:id="@+id/siren"
-        android:layout_width="65dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="108dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintEnd_toStartOf="@+id/sendLocation"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fire"
-        app:srcCompat="@drawable/card" />
-
-    <ImageButton
-        android:id="@+id/sendMessage"
-        android:layout_width="65dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="108dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintEnd_toStartOf="@+id/call"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/sendLocation"
         app:layout_constraintTop_toBottomOf="@+id/fire"
         app:srcCompat="@drawable/card" />
 
@@ -90,7 +54,7 @@
         app:srcCompat="@drawable/card" />
 
     <ImageButton
-        android:id="@+id/custom"
+        android:id="@+id/SOS"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginTop="28dp"
@@ -107,7 +71,7 @@
         android:layout_height="160dp"
         android:layout_marginTop="28dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintEnd_toStartOf="@+id/custom"
+        app:layout_constraintEnd_toStartOf="@+id/SOS"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/police"
@@ -168,6 +132,19 @@
         app:layout_constraintTop_toTopOf="@+id/police" />
 
     <TextView
+        android:id="@+id/changeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="change SOS Number"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/changeSOS"
+        app:layout_constraintEnd_toEndOf="@+id/changeSOS"
+        app:layout_constraintStart_toStartOf="@+id/changeSOS"
+        app:layout_constraintTop_toTopOf="@+id/changeSOS" />
+
+    <TextView
         android:id="@+id/ambulanceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -207,6 +184,19 @@
         app:layout_constraintStart_toStartOf="@+id/pincodeBar"
         app:layout_constraintTop_toTopOf="@+id/pincodeBar"
         app:layout_constraintVertical_bias="0.49" />
+
+    <TextView
+        android:id="@+id/customNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="SOS"
+        android:textColor="#FFFFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/SOS"
+        app:layout_constraintEnd_toEndOf="@+id/SOS"
+        app:layout_constraintStart_toStartOf="@+id/SOS"
+        app:layout_constraintTop_toTopOf="@+id/SOS" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,22 +35,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
-    String number = "0";
     private FirebaseAuth mAuth;
     public String currentUserId;
 
     //a constant for detecting the login intent result
     private static final int RC_SIGN_IN = 234;
-    private static final int GET_NUM = 999;
 
-    // GetContent creates an ActivityResultLauncher<String> to allow you to pass
-// in the mime type you'd like to allow the user to select
-    ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
-        @Override
-        public void onActivityResult(ActivityResult result) {
-            Log.d("aaaa", "aaaa");
-        }
-    });
     //Tag for the logs optional
     private static final String TAG = "debug";
 
@@ -125,11 +115,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }
-        if (requestCode == GET_NUM) {
-            if(resultCode == RESULT_OK) {
-                String strEditText = data.getStringExtra("editTextValue");
-            }
-        }
     }
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
@@ -170,8 +155,7 @@ public class LoginActivity extends AppCompatActivity {
         currentUserId = mAuth.getCurrentUser().getUid();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         HashMap userMap = new HashMap();
-        getPhoneNumFromUser();
-        userMap.put("phone", number);
+        userMap.put("phone", "");
 
 
         db.collection("users").document(currentUserId)
@@ -192,11 +176,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void getPhoneNumFromUser() {
-//        Intent i = new Intent(getBaseContext(), NumGetter.class);
-//        startActivityForResult(i, GET_NUM);
-        resultLauncher.launch(new Intent(NumGetter.test()));
-    }
+
 
 
     //this method is called on click
